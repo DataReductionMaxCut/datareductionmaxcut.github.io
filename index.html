@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Old Stairwell 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130313
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="TKhkDFKyhvcrubOqVQVf7xQG4bUSzAuJlXiN4_Ts7yQ" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Reduction for Maximum Cut</title>
+<meta name="keywords" content="Maximum cut, algorithm engineering, kernelization, data reduction" />
+<meta name="description" content="The main project data reduction for maximum cut." />
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#" style="color:red">Data Reduction for Maximum Cut</a> </h1>
+Damir Ferizovic, Demian Hespe, Sebastian Lamm, Matthias Mnich, Christian Schulz, Darren Strash
+		</div>
+	</div>
+	<div id="page">
+		<div id="content">
+                
+                         
+			<h2>Overview</h2>
+The (unweighted) Max Cut problem is to partition the vertex set of a given graph G=(V,E) into two sets S and V \ S so as to maximize the total number of edges between those two sets. Such a partition is called a maximum cut. Computing a maximum cut of a graph is a well-known problem in the area of computer science; it is one of Karp's 21 NP-complete problems. Furthermore, its weighted variant is one of Karp's 21 NP-complete problems. </br> </br>
+
+Kernelization is a general theoretical framework for preprocessing instances of NP-hard problems into (generally smaller) instances with bounded size, via the repeated application of data reduction rules. For the fundamental Max Cut problem, kernelization algorithms are theoretically highly efficient for various parameterizations. However, the efficacy of these reduction rules in practice---to aid solving highly challenging benchmark instances to optimality---remains entirely unexplored.
+
+We engineered a new suite of efficient data reduction rules that subsume most of the previously published rules, and demonstrate their significant impact on benchmark data sets, including synthetic instances, and data sets from the VLSI and image segmentation application domains. Our experiments reveal that current state-of-the-art solvers can be sped up by up to multiple orders of magnitude when combined with our data reduction rules. On social and biological networks in particular, kernelization enables us to solve four instances that were previously unsolved in a ten-hour time limit with state-of-the-art solvers; three of these instances are now solved in less than two seconds. Here, we provide the implementation of the algorithms. 
+
+<br>
+<br>
+
+
+                       
+                        <br><br>
+
+<b style="color:red">News:</b>       <br>
+<b> 7th January 2020:</b> Our paper has been presented at ALENEX'20. <br>
+<b> 8th January 2020:</b> Initial release of code. <br>
+<b>26th May 2019:</b> Published ArXiv Report. Link to <a href="https://arxiv.org/abs/1905.10902">PDF</a>.<br> 
+
+
+ 
+                        <p></p>
+                        <br>
+
+			<h2>License</h2>
+                        The program is licenced under MIT. <br>
+                        If you publish results using our algorithms, <b>please acknowledge</b> our work by quoting the following paper (<a href="http://arxiv.org/pdf/1702.04164.pdf">PDF</a>):<br><br>
+<b> @inbook{doi:10.1137/1.9781611976007.3, <br>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp             author = {Damir Ferizovic and Demian Hespe and Sebastian Lamm and Matthias Mnich and Christian Schulz and Darren Strash}, <br>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            title = {Engineering Kernelization for Maximum Cut}, <br>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp           booktitle = {2020 Proceedings of the Workshop on Algorithm Engineering and Experiments (ALENEX)}, <br>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp          chapter = {}, <br>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp         pages = {27-41},<br>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        doi = {10.1137/1.9781611976007.3},<br>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       URL = {https://epubs.siam.org/doi/abs/10.1137/1.9781611976007.3},<br>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      eprint = {https://epubs.siam.org/doi/pdf/10.1137/1.9781611976007.3}<br>
+       } 
+        
+        <!--</b>-->
+<!--<b>@inproceedings{maxCutDataReduction2020, <br>-->
+  <!--&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp author    = {Damir Ferizovic and -->
+               <!--Demian Hespe and -->
+               <!--Sebastian Lamm and -->
+               <!--Matthias Mnich and -->
+               <!--Christian Schulz and -->
+               <!--Darren Strash},<br> -->
+  <!--&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp title     = {Engineering Kernelization for Maximum Cut}, <br>-->
+  <!--&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp booktitle = {Proceedings of Algorithm Engineering and Experimentation (ALENEX'20), 2020}, <br>-->
+  <!--&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp year      = {2020}, <br>-->
+  <!--&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp url       = {http://arxiv.org/abs/1905.10902}, <br>-->
+  <!--&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp archivePrefix = {arXiv}, <br>-->
+  <!--&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp eprint    = {1905.10902}<br>-->
+<!--}</b>-->
+<br><br>
+
+
+
+
+
+</ul>
+                        <p></p>
+			<h2>Download</h2> 
+                        <ul>
+                                <li> Code available on GitHub <a href="https://github.com/Amtrix/fpt-max-cut">here</a> 
+
+                        </ul>
+
+			<h2>Support</h2>
+                        <ul>
+                                <li> Write us an <a href="mailto:christian.schulz@univie.ac.at?subject=SupportRequestMaxCut">email</a> if you need support!  
+                                <li>We are glad for any comments and error reports (or even bug fixes or feature requests) that you send us. 
+                                </ul>
+                                
+			<h2>Other Open Source Projects</h2>
+                        <ul>
+                                <li> <a href="http://algo2.iti.kit.edu/kahip">KaHIP</a> -- Karlsruhe High Quality Partitioning
+                                <li> <a href="http://algo2.iti.kit.edu/kahip">ParHIP</a> -- Parallel High Quality Partitioning
+                                <li> <a href="http://algo2.iti.kit.edu/kamis">KaMIS</a> -- Karlsruhe Maximum Independent Sets 
+                                <li> <a href="http://algo2.iti.kit.edu/kalp">KaLP</a> -- Karlsruhe Longest Paths 
+                                <li> <a href="http://algo2.iti.kit.edu/kadraw">KaDraw</a> -- Karlsruhe Graph Drawing 
+                                <li> <a href="https://github.com/sebalamm/KaGen/">KaGen</a> -- Karlsruhe Graph Generation 
+                                <li> <a href="http://viem.taa.univie.ac.at">VieM</a> -- Vienna Mapping and Sparse Quadratic Assignment 
+                                <li> <a href="http://vieclus.taa.univie.ac.at">VieClus</a> -- Vienna Clustering 
+                                <li> <a href="http://viecut.taa.univie.ac.at">VieCut</a> -- Vienna Minimum Cuts 
+                                </ul>
+                                
+
+</a>
+
+
+
+
+	        </div>
+
+        </div>
+	<div id="footer">
+		<p>Copyright (c) 2020. Site maintained by Christian Schulz. All rights reserved. Initial release: January 2020. See main site for impressum. Design by <a href="http://www.freecsstemplates.org">FCT</a>.</p>
+	</div>
+</div>
+</body>
+</html>
